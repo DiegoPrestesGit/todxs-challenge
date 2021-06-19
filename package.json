@@ -1,0 +1,8 @@
+{
+  "name": "todxs-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DiegoPrestesGit/todxs-challenge.git",
+  "author": "Diego Prestes <diegoprestes.git@hotmail.com>",
+  "license": "MIT"
+}
