@@ -19,9 +19,11 @@ check out the ``concept.md`` for more information about the thought process I've
 
 ## :new_moon: POOL OF TODOS
 
-* [ ] configure the project basis
-  * [ ] linters
-  * [ ] commit checker
+* [x] configure the project basis
+  * [x] linters
+  * [x] commit checker
+  * [x] jest for tests
+  * [x] prettier
 * [ ] create a simple user CRUD for the system
   * [ ] CREATE
   * [ ] READ
