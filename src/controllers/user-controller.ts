@@ -1,6 +1,9 @@
 import { Request, Response } from 'express'
 import UserRepository from '../repositories/user-repository'
 import UserListService from '../services/list-all-users'
+import CreateUser from '../services/create-user'
+import { InvalidParamError } from '../utils/errors'
+import { badRequest } from '../utils/http-helpers'
 
 export default class UserController {
   public async index(_: Request, response: Response): Promise<Response> {
@@ -8,5 +11,31 @@ export default class UserController {
     const userListService = new UserListService(userRepository)
     const allUsers = await userListService.execute()
     return response.json(allUsers)
+  }
+
+  public async create(request: Request, response: Response): Promise<any> {
+    const requiredFields = [
+      'name',
+      'email',
+      'password',
+      'cpf',
+      'averageMonthlyIncome',
+      'averageMonthlyExpense'
+    ]
+
+    for (const field of requiredFields) {
+      if (!request.body[field]) {
+        const badReq = badRequest(new InvalidParamError(field))
+        return response.status(badReq.statusCode).json(badReq.body)
+      }
+    }
+
+    const userRepository = new UserRepository()
+    const createUserService = new CreateUser(userRepository)
+
+    const serviceResponse = await createUserService.execute(request.body)
+    return response
+      .status(serviceResponse.statusCode)
+      .json(serviceResponse.body)
   }
 }
