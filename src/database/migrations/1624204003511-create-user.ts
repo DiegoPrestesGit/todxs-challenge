@@ -24,6 +24,11 @@ export class createUser1624204003511 implements MigrationInterface {
             isUnique: true
           },
           {
+            name: 'cpf',
+            type: 'varchar',
+            isUnique: true
+          },
+          {
             name: 'password',
             type: 'varchar'
           },
@@ -34,6 +39,16 @@ export class createUser1624204003511 implements MigrationInterface {
           {
             name: 'averageMonthlyExpense',
             type: 'float'
+          },
+          {
+            name: 'created_at',
+            type: 'timestamp',
+            default: 'now()'
+          },
+          {
+            name: 'updated_at',
+            type: 'timestamp',
+            default: 'now()'
           }
         ]
       })
