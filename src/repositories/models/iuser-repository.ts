@@ -1,11 +1,11 @@
 import User from '../../database/entities/user'
-import CreateUserDTO from '../../models/user/use-cases/create-user'
-import IShowUser from '../../models/user/use-cases/show-user'
+import ICreateUser from '../../use-cases/user/icreate-user'
+import IShowUser from '../../use-cases/user/ishow-user'
 
 export default interface IUserRepository {
   findAllUsers: () => Promise<IShowUser[]>
   findById: (id: string) => Promise<IShowUser | undefined>
   findByEmail: (email: string) => Promise<IShowUser | undefined>
   findByCpf: (cpf: string) => Promise<IShowUser | undefined>
-  create: (userData: CreateUserDTO) => Promise<User>
+  create: (userData: ICreateUser) => Promise<User>
 }
