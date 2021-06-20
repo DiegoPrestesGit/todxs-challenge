@@ -31,6 +31,7 @@ check out the ``concept.md`` for more information about the thought process I've
   * [ ] UPDATE
   * [ ] DELETE
 * [ ] implement business rules for the credit proposal
+* [ ] refactor services and controllers with try/catch
 * [ ] implement tests in the service layer
 * [ ] export routes for insomnia and postman
 * [ ] check if the spelling is correct
