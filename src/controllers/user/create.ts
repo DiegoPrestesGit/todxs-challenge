@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import UserRepository from '../../repositories/user-repository'
-import UserListService from '../../services/user/list-all-users'
-import CreateUser from '../../services/user/create-user'
+import UserListService from '../../services/user/list-all'
+import CreateUser from '../../services/user/create'
 import { InvalidParamError } from '../../utils/errors'
 import { badRequest } from '../../utils/http-helpers'
 
