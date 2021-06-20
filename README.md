@@ -30,6 +30,8 @@ check out the ``concept.md`` for more information about the thought process I've
   * [ ] READ
   * [ ] UPDATE
   * [ ] DELETE
+* [ ] implement tests in the service layer
+* [ ] export routes for insomnia and postman
 * [ ] check if the spelling is correct
 
 ## License
