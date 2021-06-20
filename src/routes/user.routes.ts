@@ -1,10 +1,14 @@
 import { Router } from 'express'
-import UserController from '../controllers/user-controller'
+import {
+  CreateController,
+  ListUsersController
+} from '../controllers/user/index'
 
 const userRouter = Router()
-const userController = new UserController()
+const createUserController = new CreateController()
+const listUsers = new ListUsersController()
 
-userRouter.get('/', userController.index)
-userRouter.post('/', userController.create)
+userRouter.get('/', listUsers.execute)
+userRouter.post('/', createUserController.execute)
 
 export default userRouter

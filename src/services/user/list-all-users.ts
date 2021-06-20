@@ -1,5 +1,5 @@
-import IShowUser from '../use-cases/user/ishow-user'
-import IUserRepository from '../repositories/models/iuser-repository'
+import IShowUser from '../../use-cases/user/ishow-user'
+import IUserRepository from '../../repositories/models/iuser-repository'
 
 export default class ListUserService {
   constructor(private readonly userRepository: IUserRepository) {}
