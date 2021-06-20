@@ -27,7 +27,7 @@ check out the ``concept.md`` for more information about the thought process I've
 * [x] configure basis of the project (database preset, express server...)
 * [ ] create a simple user CRUD for the system
   * [x] CREATE
-  * [ ] READ
+  * [x] READ
   * [ ] UPDATE
   * [ ] DELETE
 * [ ] implement business rules for the credit proposal
