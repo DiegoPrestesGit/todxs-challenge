@@ -23,10 +23,10 @@ class User {
   @Column()
   cpf: string
 
-  @Column()
+  @Column('decimal', { precision: 2, scale: 2 })
   averageMonthlyIncome: number
 
-  @Column()
+  @Column('decimal', { precision: 2, scale: 2 })
   averageMonthlyExpense: number
 
   @CreateDateColumn()
