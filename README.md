@@ -24,12 +24,12 @@ check out the ``concept.md`` for more information about the thought process I've
   * [x] commit checker
   * [x] jest for tests
   * [x] prettier
+* [x] configure basis of the project (database preset, express server...)
 * [ ] create a simple user CRUD for the system
   * [ ] CREATE
   * [ ] READ
   * [ ] UPDATE
   * [ ] DELETE
-* [ ] 
 * [ ] check if the spelling is correct
 
 ## License
