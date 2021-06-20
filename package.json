@@ -6,7 +6,7 @@
   "author": "Diego Prestes <diegoprestes.git@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only src/server.ts",
+    "dev": "ts-node-dev --watch src/ --transpile-only src/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
