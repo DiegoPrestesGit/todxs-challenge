@@ -17,7 +17,7 @@
 
 check out the ``concept.md`` for more information about the thought process I've had.
 
-## :new_moon: POOL OF TODOS
+## :new_moon: TODOS
 
 * [x] configure the project basis
   * [x] linters
@@ -26,10 +26,11 @@ check out the ``concept.md`` for more information about the thought process I've
   * [x] prettier
 * [x] configure basis of the project (database preset, express server...)
 * [ ] create a simple user CRUD for the system
-  * [ ] CREATE
+  * [x] CREATE
   * [ ] READ
   * [ ] UPDATE
   * [ ] DELETE
+* [ ] implement business rules for the credit proposal
 * [ ] implement tests in the service layer
 * [ ] export routes for insomnia and postman
 * [ ] check if the spelling is correct
