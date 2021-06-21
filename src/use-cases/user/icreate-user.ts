@@ -3,6 +3,7 @@ export default interface CreateUserDTO {
   email: string
   password: string
   cpf: string
+  serasaScore: number
   averageMonthlyIncome: number
   averageMonthlyExpense: number
 }

@@ -1,5 +1,4 @@
 import { badRequest, ok, unauthorized } from '../../utils/http-helpers'
-import IShowUser from '../../use-cases/user/ishow-user'
 import IUserRepository from '../../repositories/models/iuser-repository'
 import { InvalidParamError } from '../../utils/errors'
 import HttpResponse from '../../utils/http'
@@ -12,8 +11,13 @@ export default class ListUserService {
     id: string,
     userData: IUpdateUser
   ): Promise<HttpResponse> {
-    const { email, password, averageMonthlyExpense, averageMonthlyIncome } =
-      userData
+    const {
+      email,
+      password,
+      serasaScore,
+      averageMonthlyExpense,
+      averageMonthlyIncome
+    } = userData
 
     const user = await this.userRepository.findById(id)
     if (!user) return badRequest(new InvalidParamError('id'))
@@ -29,11 +33,12 @@ export default class ListUserService {
 
     if (password !== user.password) return unauthorized()
 
+    if (serasaScore) user.serasaScore = serasaScore
     if (averageMonthlyIncome) user.averageMonthlyIncome = averageMonthlyIncome
     if (averageMonthlyExpense)
       user.averageMonthlyExpense = averageMonthlyExpense
 
-    const updatedUser: IShowUser = await this.userRepository.save(user)
+    const updatedUser = await this.userRepository.save(user)
     return ok(updatedUser)
   }
 }

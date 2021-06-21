@@ -14,6 +14,7 @@ export class CreateController {
       'email',
       'password',
       'cpf',
+      'serasaScore',
       'averageMonthlyIncome',
       'averageMonthlyExpense'
     ]

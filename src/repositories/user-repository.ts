@@ -1,7 +1,6 @@
 import { getRepository, Repository } from 'typeorm'
 import User from '../database/entities/user'
 import ICreateUser from '../use-cases/user/icreate-user'
-import IShowUser from '../use-cases/user/ishow-user'
 import IUserRepository from './models/iuser-repository'
 
 export default class UserRepository implements IUserRepository {
@@ -11,7 +10,7 @@ export default class UserRepository implements IUserRepository {
     this.ormRepository = getRepository(User)
   }
 
-  public async findAllUsers(): Promise<IShowUser[]> {
+  public async findAllUsers(): Promise<User[]> {
     const users = await this.ormRepository.find()
     return users
   }
