@@ -2,16 +2,19 @@ import { Router } from 'express'
 import {
   CreateController,
   ListUsersController,
-  FindOneController
+  FindOneController,
+  UpdateController
 } from '../controllers/user/index'
 
-const userRouter = Router()
-const createUserController = new CreateController()
-const listUsers = new ListUsersController()
+const router = Router()
+const createController = new CreateController()
+const list = new ListUsersController()
 const findOne = new FindOneController()
+const update = new UpdateController()
 
-userRouter.get('/', listUsers.execute)
-userRouter.get('/:id', findOne.execute)
-userRouter.post('/', createUserController.execute)
+router.get('/', list.execute)
+router.get('/:id', findOne.execute)
+router.post('/', createController.execute)
+router.put('/:id', update.execute)
 
-export default userRouter
+export default router

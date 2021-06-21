@@ -16,17 +16,17 @@ export default class UserRepository implements IUserRepository {
     return users
   }
 
-  public async findById(id: string): Promise<IShowUser | undefined> {
+  public async findById(id: string): Promise<User | undefined> {
     const user = await this.ormRepository.findOne({ where: { id } })
     return user
   }
 
-  public async findByEmail(email: string): Promise<IShowUser | undefined> {
+  public async findByEmail(email: string): Promise<User | undefined> {
     const user = await this.ormRepository.findOne({ where: { email } })
     return user
   }
 
-  public async findByCpf(cpf: string): Promise<IShowUser | undefined> {
+  public async findByCpf(cpf: string): Promise<User | undefined> {
     const user = await this.ormRepository.findOne({ where: { cpf } })
     return user
   }
@@ -35,5 +35,9 @@ export default class UserRepository implements IUserRepository {
     const user = this.ormRepository.create(userData)
     await this.ormRepository.save(user)
     return user
+  }
+
+  public async save(user: User): Promise<User> {
+    return await this.ormRepository.save(user)
   }
 }
