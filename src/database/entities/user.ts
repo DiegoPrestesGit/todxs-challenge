@@ -23,6 +23,9 @@ class User {
   @Column()
   cpf: string
 
+  @Column()
+  serasaScore: number
+
   @Column('decimal', { precision: 2, scale: 2 })
   averageMonthlyIncome: number
 

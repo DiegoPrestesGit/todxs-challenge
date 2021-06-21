@@ -33,6 +33,10 @@ export class createUser1624204003511 implements MigrationInterface {
             type: 'varchar'
           },
           {
+            name: 'serasaScore',
+            type: 'int'
+          },
+          {
             name: 'averageMonthlyIncome',
             type: 'float'
           },
