@@ -10,9 +10,7 @@ export class FindOneController {
     const { id } = request.params
     const userRepository = new UserRepository()
     const userListService = new FindOneService(userRepository)
-    const serviceResponse = await userListService.execute(id)
-    return response
-      .status(serviceResponse.statusCode)
-      .json(serviceResponse.body)
+    const { statusCode, body } = await userListService.execute(id)
+    return response.status(statusCode).json(body)
   }
 }
