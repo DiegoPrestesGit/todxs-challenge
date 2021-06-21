@@ -28,8 +28,7 @@ check out the ``concept.md`` for more information about the thought process I've
 * [ ] create a simple user CRUD for the system
   * [x] CREATE
   * [x] READ
-  * [ ] UPDATE
-  * [ ] DELETE
+  * [x] UPDATE
 * [ ] implement business rules for the credit proposal
 * [ ] refactor services and controllers with try/catch
 * [ ] implement tests in the service layer
