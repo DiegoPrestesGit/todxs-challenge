@@ -1,13 +1,13 @@
 <div align="center">
 
-# TODXS CHALLENGE :milky_way:
+# TODXS CHALLENGE :milky_way
 
 <img alt="longRoadAhead" src="https://thumbs.gfycat.com/CanineSameEwe-small.gif" />
 <blockquote >"If you want to improve, be content to be thought foolish and stupid"</blockquote>
 </br>
 </div>
 
-## Install :wrench:
+## Install :wrench
 
 * Clone the repo and run ``yarn`` or ``npm install``
 
@@ -22,16 +22,14 @@ check out the ``concept.md`` for more information about the thought process I've
 * [x] configure the project basis
   * [x] linters
   * [x] commit checker
-  * [x] jest for tests
   * [x] prettier
 * [x] configure basis of the project (database preset, express server...)
-* [ ] create a simple user CRUD for the system
+* [x] create a simple user CRUD for the system
   * [x] CREATE
   * [x] READ
   * [x] UPDATE
 * [ ] implement business rules for the credit proposal
 * [ ] refactor services and controllers with try/catch
-* [ ] implement tests in the service layer
 * [ ] export routes for insomnia and postman
 * [ ] check if the spelling is correct
 
